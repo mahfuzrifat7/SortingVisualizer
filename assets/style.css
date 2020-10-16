@@ -8,11 +8,20 @@ body {
     color: #ccc;
 }
 
+.display-none {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+}
+
 #array-container {
     height: 350px;
     margin-top: 3em;
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
 }
 
 #array {
@@ -21,6 +30,23 @@ body {
 
 .element {
     display: inline-block;
+    border-radius: 5px;
+}
+
+#no-algo-warning {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 

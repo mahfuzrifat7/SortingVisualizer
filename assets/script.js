@@ -137,6 +137,9 @@ $(document).ready(function() {
 
             $(".algo-btn-active").removeClass('algo-btn-active');
             $(this).addClass('algo-btn-active');
+
+            $("#no-algo-warning").removeClass('display-flex');
+            $("#no-algo-warning").addClass('display-none');
         }
     );
 
@@ -158,11 +161,14 @@ $(document).ready(function() {
                 await quicksort(0, size - 1);
             else if(algo_selected == "Heapsort")
                 await heapsort();
+            else {
+                $("#no-algo-warning").removeClass('display-none');
+                $("#no-algo-warning").addClass('display-flex');
+            }
 
             enableOthers();
         }
     );
-    
 
     $("#size-slider").on('input', function() {
         size = $(this).val();
